@@ -49,6 +49,7 @@ exports.createOne = (Model) =>
     });
   });
 
+//get one by id
 exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id);
@@ -69,6 +70,7 @@ exports.getOne = (Model, popOptions) =>
     });
   });
 
+//get all documents
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.find();

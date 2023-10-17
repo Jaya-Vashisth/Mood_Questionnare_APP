@@ -4,7 +4,9 @@ const mongoose = require("mongoose");
 
 const userRouter = require("./routes/userRoutes");
 const questionRouter = require("./routes/questionareRoutes");
-// const responseRoutes = require("./routes/responseRoutes");
+const contentRouter = require("./routes/contentRoutes");
+const recommendRouter = require("./routes/reportRecommend");
+const responseRoutes = require("./routes/responseRoutes");
 
 const app = express();
 
@@ -19,7 +21,9 @@ mongoose.connect(DATABASE).then(() => {
 });
 
 app.use("/api/v1/users", userRouter);
-// app.use("/api/response", responseRoutes);
+app.use("/api/response", responseRoutes);
 app.use("/api/v1/questionnare", questionRouter);
+app.use("/api/v1/content", contentRouter);
+app.use("/api/v1/recommend", recommendRouter);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));

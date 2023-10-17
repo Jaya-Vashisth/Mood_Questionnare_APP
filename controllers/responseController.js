@@ -36,4 +36,5 @@ exports.myResponses = catchAsync(async (req, res, next) => {
   });
 });
 
+//return all the responses available in the database
 exports.returnAll = factory.getAll(Response);

@@ -31,6 +31,7 @@ const questionnaireSchema = new mongoose.Schema({
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User", // Reference to the User model who created this questionnaire
+    select: false,
   },
 });
 

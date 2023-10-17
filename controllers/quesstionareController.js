@@ -26,8 +26,8 @@ exports.getOne = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getByid = factory.getOne(QuesModel);
-exports.createQuestionaries = factory.createOne(QuesModel);
-exports.deleteQuestionaries = factory.deleteOne(QuesModel);
-exports.updateQuestionaries = factory.updateOne(QuesModel);
-exports.getAll = factory.getAll(QuesModel);
+exports.getByid = factory.getOne(QuesModel); //questionnaire by id
+exports.createQuestionaries = factory.createOne(QuesModel); //create questionnaire
+exports.deleteQuestionaries = factory.deleteOne(QuesModel); //delete questionnaire
+exports.updateQuestionaries = factory.updateOne(QuesModel); //update questionnaire
+exports.getAll = factory.getAll(QuesModel); //get all the questionnaire
