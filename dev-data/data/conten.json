@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Relaxation Video 1",
+      "category": "Relaxation",
+      "type": "Video",
+      "source": "Relaxation Channel",
+      "link": "https://www.example.com/relaxation-video-1",
+      "description": "A calming video to help you relax and unwind."
+    },
+    {
+      "title": "Relaxation Article 1",
+      "category": "Relaxation",
+      "type": "Article",
+      "source": "Wellness Magazine",
+      "link": "https://www.example.com/relaxation-article-1",
+      "description": "Read about relaxation techniques and stress reduction."
+    },
+    {
+      "title": "Stress Relief Video 1",
+      "category": "Stress Relief",
+      "type": "Video",
+      "source": "Stress Relief Experts",
+      "link": "https://www.example.com/stress-relief-video-1",
+      "description": "Effective stress-relief exercises and tips."
+    },
+    {
+      "title": "Stress Relief Article 1",
+      "category": "Stress Relief",
+      "type": "Article",
+      "source": "Mental Health Blog",
+      "link": "https://www.example.com/stress-relief-article-1",
+      "description": "Learn how to manage and reduce stress in daily life."
+    },
+    {
+      "title": "Productivity Video 1",
+      "category": "Productivity",
+      "type": "Video",
+      "source": "Productivity Guru",
+      "link": "https://www.example.com/productivity-video-1",
+      "description": "Boost your productivity with proven strategies."
+    },
+    {
+      "title": "Productivity Article 1",
+      "category": "Productivity",
+      "type": "Article",
+      "source": "Business Insider",
+      "link": "https://www.example.com/productivity-article-1",
+      "description": "Read about time management and productivity hacks."
+    }
+  ]
+    
