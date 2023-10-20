@@ -20,7 +20,7 @@ const responseSchema = new mongoose.Schema(
           required: true,
         },
 
-        answer: {
+        response: {
           type: String,
           required: true,
         },

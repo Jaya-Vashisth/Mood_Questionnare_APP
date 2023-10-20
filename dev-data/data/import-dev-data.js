@@ -1,7 +1,8 @@
 const fs = require("fs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Questionnaire = require("./../../models/QuestionnareModel");
+// const Questionnaire = require("./../../models/QuestionnareModel");
+const Content = require("./../../models/contentModel");
 
 dotenv.config({ path: "./config.env" });
 
@@ -11,13 +12,13 @@ mongoose.connect(DB).then((con) => {
   console.log("DB connection successful");
 });
 
-const questionare = JSON.parse(
-  fs.readFileSync(`${__dirname}/questionare.json`, "utf-8")
+const content = JSON.parse(
+  fs.readFileSync(`${__dirname}/content.json`, "utf-8")
 );
 
 const importData = async () => {
   try {
-    await Questionnaire.create(questionare);
+    await Content.create(content);
     console.log("Data successfully loaded");
     process.exit();
   } catch (err) {
@@ -28,7 +29,7 @@ const importData = async () => {
 //delete all data from DB
 const deleteData = async () => {
   try {
-    await Questionnaire.deleteMany();
+    await Content.deleteMany();
     console.log("Data successfully deleted");
     process.exit();
   } catch (err) {

@@ -27,7 +27,7 @@ exports.saveResponse = catchAsync(async (req, res, next) => {
 exports.myResponses = catchAsync(async (req, res, next) => {
   user = req.user.id;
 
-  const responses = Response.find({ user: user });
+  const responses = await Response.find({ user: user });
 
   res.status(200).json({
     status: "success",
