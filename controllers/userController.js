@@ -2,12 +2,15 @@ const AppError = require("./../utils/appError");
 const catchAsync = require("./../utils/catchAsync");
 const User = require("./../models/userModel");
 const factory = require("./factorycontroller");
+const appError = require("./../utils/appError");
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
   Object.keys(obj).forEach((el) => {
     if (allowedFields.includes(el)) newObj[el] = obj[el];
   });
+
+  return newObj;
 };
 
 //update user info
@@ -17,9 +20,19 @@ exports.updateMe = catchAsync(async (req, res, next) => {
 
   const filterBody = filterObj(req.body, "name", "email");
 
-  const updateuser = await User.findByIdAndUpdate(req.user.id, filterBody, {
+  const updateduser = await User.findByIdAndUpdate(req.user.id, filterBody, {
     new: true,
     runValidators: true,
+  });
+
+  if (!updateduser) {
+    return next(new appError("No document with that ID", 404));
+  }
+  res.status(200).json({
+    status: "success",
+    data: {
+      data: updateduser,
+    },
   });
 });
 

@@ -27,40 +27,6 @@
   },
 
   {
-    "title": "Happiness Index",
-    "questions": [
-      {
-        "text": "On a scale of 1 to 10, how happy are you?",
-        "type": "slider",
-        "required": true,
-        "min": 1,
-        "max": 10
-      },
-      {
-        "text": "Are you satisfied with your work-life balance?",
-        "type": "yes-no",
-        "required": true
-      },
-      {
-        "text": "What makes you happy? (Select all that apply)",
-        "type": "multiple-choice",
-        "required": true,
-        "options": [  { "text": "Spending time with loved ones" },
-        { "text": "Accomplishing goals" },
-        { "text": "Nature and outdoors" },
-        { "text": "Hobbies" },
-        { "text": "Music" }]
-      },
-      {
-        "text": "Share a recent happy moment or achievement.",
-        "type": "open-ended",
-        "required": false
-      }
-    ]
-  },
-
-
-  {
     "title": "Wellness Checkup",
     "questions": [
       {

@@ -15,3 +15,5 @@ router.get(
   authcontroller.restrictTo("admin"),
   responseController.returnAll
 );
+
+module.exports = router;

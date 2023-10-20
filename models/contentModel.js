@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const contentSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: [true, "Please provide title"],
+    required: [true, "There must be a title for the content"],
   },
 
   category: {
@@ -11,17 +11,17 @@ const contentSchema = new mongoose.Schema({
     enum: [
       "Relaxation",
       "Stress Relief",
-      "Productivity and Motivation",
+      "Productivity",
       "Wellness and Self-care",
       "Mental Health",
     ],
-    required: [true, "Please provide category name"],
+    required: [true, "There must be a category"],
   },
 
   type: {
     type: String,
     enum: ["Blog", "Video", "Podcast", "Article"],
-    required: [true, "Please spicify type of the content"],
+    required: [true, "Type of content is must"],
   },
 
   source: {
@@ -31,7 +31,7 @@ const contentSchema = new mongoose.Schema({
 
   link: {
     type: String,
-    required: [true, "Please Provide the link"],
+    required: [true, "There me link for the source"],
   },
 
   desription: {
@@ -39,5 +39,5 @@ const contentSchema = new mongoose.Schema({
   },
 });
 
-const Content = mongoose.Model("Content", contentSchema);
+const Content = mongoose.model("Content", contentSchema);
 module.exports = Content;

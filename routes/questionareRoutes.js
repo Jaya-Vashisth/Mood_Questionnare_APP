@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const authcontroller = require("./../controllers/authcontroller");
 
-//list all present in database
+//list all  present questionnaire in database (only title)
 router.get("/listAll", quesController.getlist);
 
 //////////////////////////////////////////
